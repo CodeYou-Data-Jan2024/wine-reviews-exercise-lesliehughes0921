@@ -3,4 +3,4 @@ data = pd.read_csv(r"C:\Users\lesli\github-classroom\CodeYou-Data-Jan2024\wine-r
 data["points"] = data["points"].round(1)
 data = data.groupby('country').agg({'title': 'count', 'points': 'mean'}).reset_index()
 data.columns = ["country", "count", "points"]
-data.to_csv("reviews-per-country.csv")
+data.to_csv("reviews-per-country.csv", index=None)
